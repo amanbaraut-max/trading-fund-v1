@@ -8,7 +8,8 @@ scipy==1.11.4
 yfinance==0.2.32
 
 # Brokers
-ib-insync==10.13.23
+# `ib-insync` is omitted from core requirements for Streamlit deployment
+# (execution layer is optional and depends on IBKR; install locally when needed)
 
 # Dashboard & Visualization
 streamlit==1.28.1

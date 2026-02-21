@@ -2,7 +2,11 @@
 pandas==2.1.3
 # Use numpy 1.26.x to satisfy pandas 2.1.x dependency on Python 3.13 environments
 numpy==1.26.4
-scipy==1.11.4
+# scipy removed from cloud requirements because building SciPy on
+# Streamlit Cloud's Python 3.13 environment requires a Fortran
+# compiler (gfortran) and other build tools not available in the
+# build image. Install SciPy locally if you need it for backtesting.
+# scipy==1.11.4
 
 # Market Data
 yfinance==0.2.32
